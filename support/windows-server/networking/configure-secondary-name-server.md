@@ -13,7 +13,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This step-by-step article describes how to configure a secondary DNS server.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  ( Need to change this is same behavior still applies and can be used for modern OS server versions 2016 and above )  
 _Original KB number:_ &nbsp; 816518
 
 ## Identify the secondary name server
@@ -44,17 +44,14 @@ On the primary DNS server, identify an additional name server. To do this, follo
 
 ### Install DNS on the secondary name server
 
-To install the DNS service, follow these steps:
-
+To install the DNS service, follow these steps: This needs to be changed to match modern OS versions as follow:
 1. Log on to the computer as an administrator.
-2. Click **Start**, point to **Control Panel**, and then click **Add or Remove Programs**.
-3. Click **Add\Remove Windows Components**.
-4. In the **Components** list, click **Networking Services** (do not click to select or click to clear the check box), and then click **Details**.
-5. Click to select the **Domain Name System (DNS)** check box, and then click **OK**.
-6. On the **Windows Components** page, click **Next**.
-7. Insert the Windows 2003 Server CD when you are prompted, and then click **OK**.
-8. On the **Completing the Windows Components Wizard** page, click **Finish**.
-9. Click **Close**.
+2. Click **Start**, **Server Manger**, **Manage**, and then click **Add Roles and Features**.
+3. Click next on **Before we Begin**, Click next on **Select Installation Type**, Cliek next on **Select Destination Server**
+4. Choose **DNS Server** from the list of roles and click next till end of the wizard
+5. Click **Install** on **Confirm Installation Selection**
+6. After some time click **Close** Once the role is fully installed
+
 
     DNS is now installed. To start the DNS snap-in, click **Start**, point to **Administrative Tools**, and then click **DNS**.
 
@@ -121,6 +118,6 @@ This issue may occur if zone transfers are disabled. To resolve this issue, foll
 
 ## Troubleshoot DNS
 
-To troubleshoot and obtain information about the DNS configuration, use the [Nslookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)) utility.
+To troubleshoot and obtain information about the DNS configuration, use the [Nslookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)) utility. Resolve-DNSName is a recommnded troubleshooting tool rather than nslookup so it is better to include this link instead https://learn.microsoft.com/en-us/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2022-ps
 
-For more information about how to install and configure DNS, see [How To Install and Configure DNS Server in Windows Server 2003](https://support.microsoft.com/help/814591).
+For more information about how to install and configure DNS, see [How To Install and Configure DNS Server in Windows Server 2003](https://support.microsoft.com/help/814591). New link for DNS server installation https://learn.microsoft.com/en-us/windows-server/networking/dns/quickstart-install-configure-dns-server?tabs=powershell 
