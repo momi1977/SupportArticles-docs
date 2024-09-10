@@ -1,4 +1,4 @@
----
+The article URL still refers to windows 2003 while the behavior still applies to modern OS versions so it is better to updatet he URL to avoid confusing the readers ---
 title: How to configure DNS dynamic updates in Windows Server
 description: Describes that  how to configure DNS dynamic updates in Windows Server and how to integrate DNS updates with DHCP.
 ms.date: 12/26/2023
