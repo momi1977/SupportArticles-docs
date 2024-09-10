@@ -1,4 +1,4 @@
----
+Please archive this one as the info if not valid for modern OS versions ---
 title: DNS server logs event 7062
 description: Provides a solution to solve the DNS server logs event 7062.
 ms.date: 12/26/2023
